@@ -1,22 +1,10 @@
-<div align="center">
+I’m a **Tech Lead Manager** at DiDi Autonomous Driving, where I lead the Tracking and Localization team. 
 
-## 👨‍💻 About me
 
-**Role:** Tech Lead Manager @ DiDi Autonomous Driving  
-**Team:** Tracking and Localization  
-**Focus:** Multi-modal Perception, SLAM & World Modeling  
-**Mission:** Turning algorithmic research into scalable autonomous driving systems
+My expertise spans **multi-modal perception, SLAM, and world modeling**—I’m passionate about landing cutting-edge research into robust, scalable foundations for self-driving vehicles.
 
----
 
-### 🎓 Academic Background
-| Degree | Institution |
-|--------|-------------|
-| Ph.D. | French National Institute of Geographic and Forestry Information (IGN) |
-| M.S. & B.S. | Wuhan University |
+I hold a **Ph.D.** from the French National Institute of Geographic and Forestry Information (IGN), following my **M.S.** and **B.S.** degrees from Wuhan University.
 
----
 
-🔗 **Open to technical collaborations** in autonomous driving research & development.
-
-</div>
+I’m always open to technical collaborations to push the boundaries of autonomous driving technology.
