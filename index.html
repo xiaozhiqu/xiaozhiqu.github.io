@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaozhi Qu | Perception Tech Lead @ DiDi Autonomous Driving</title>
+    <meta name="description" content="Tech Lead Manager at DiDi Autonomous Driving, specializing in Tracking, Localization, SLAM, and Multi-modal Perception.">
+    <meta name="keywords" content="SLAM, Autonomous Driving, Computer Vision, Tracking, Localization, Multi-modal Perception">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-secondary: #f9fafb;
+            --border: #e5e7eb;
+            --gradient-start: #3b82f6;
+            --gradient-end: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.35);
+            border: 4px solid white;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.025em;
+        }
+
+        .hero .title {
+            font-size: 20px;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            font-weight: 400;
+        }
+
+        .hero .title strong {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .hero .tagline {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Section */
+        .section {
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section h2 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+
+        /* Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .expertise-item {
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .expertise-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .expertise-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .expertise-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Education */
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .education-item {
+            display: flex;
+            gap: 24px;
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            align-items: center;
+        }
+
+        .education-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .education-icon svg {
+            width: 28px;
+            height: 28px;
+            color: white;
+        }
+
+        .education-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .education-content .degree {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* CTA */
+        .cta {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .cta h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: none;
+            letter-spacing: normal;
+            color: var(--text);
+        }
+
+        .cta p {
+            color: var(--text-light);
+            margin-bottom: 32px;
+            font-size: 17px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-light);
+            font-size: 14px;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .title {
+                font-size: 17px;
+            }
+
+            .hero .tagline {
+                font-size: 16px;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-link {
+                justify-content: center;
+            }
+
+            .education-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="avatar">
+                <img src="profile.jpg" alt="Xiaozhi Qu">
+            </div>
+            <h1>Xiaozhi Qu</h1>
+            <p class="title">Perception Tech Lead at <strong>DiDi Autonomous Driving</strong></p>
+            <p class="tagline">
+                Passionate about landing cutting-edge research into robust, scalable foundations for self-driving vehicles.
+            </p>
+
+            <div class="social-links">
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" class="social-link" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                        <path d="M8 7h6"/>
+                        <path d="M8 11h8"/>
+                    </svg>
+                    Google Scholar
+                </a>
+                <a href="https://www.linkedin.com/in/xiaozhi-qu" class="social-link" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                        <rect x="2" y="9" width="4" height="12"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="section">
+            <h2>Areas of Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h3>World Model</h3>
+                    <p>Building comprehensive models of the driving environment</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Perception</h3>
+                    <p>Fusing data from multiple sensors for robust environment understanding</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>SLAM</h3>
+                    <p>Simultaneous Localization and Mapping for autonomous navigation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section">
+            <h2>Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <div class="education-content">
+                        <h3>Institut National de l'Information Geographique et Forestiere (IGN)</h3>
+                        <p class="degree">Ph.D. in Computer Science</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                        </svg>
+                    </div>
+                    <div class="education-content">
+                        <h3>Wuhan University</h3>
+                        <p class="degree">M.S. & B.S.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <h2>Let's Collaborate</h2>
+            <p>Always open to technical collaborations to push the boundaries of autonomous driving technology.</p>
+            <a href="mailto:xiaozhi.qu@foxmail.com" class="cta-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+                xiaozhi.qu@foxmail.com
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Xiaozhi Qu. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Smooth scroll behavior -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
